@@ -18,8 +18,6 @@ int main()
     int universe_low = 0;
     int universe_up = 100;
 
-    char bukva;
-
     for(;;)
     {
     system("clear");
