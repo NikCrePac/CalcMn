@@ -45,5 +45,3 @@ void crossing_mass(char sim1, char sim2, int * ms1, int * ms2, int * b)
         }
     }
 }
-
-//test
