@@ -13,10 +13,13 @@ int main()
     int D[] = {0, 0, 0, 0, 0};   //Множество D
     int E[] = {0, 0, 0, 0, 0};    //Множество E
 
-    int chislo_dlya_proverki = 0;
+    int chislo_dlya_proverki = 0;   //Число для проверки принадлежности множеству
 
     int universe_low = 0;
     int universe_up = 100;
+
+    int mn_dlya_ob1 = 0;
+    int mn_dlya_ob2 = 0;
 
     for(;;)
     {
@@ -37,19 +40,20 @@ int main()
     puts("6. Задать универсум");
     puts("7. Найти пересечение всех множеств");
     puts("8. Найти пересечение множеств");
+    puts("9. Объединение множеств");
     puts("0. Выход");
 
     scanf("%d", &menu);    //Ввод номера пункта меню
 
-    switch(menu)    //Меню 1
+    switch(menu)    //Главное меню
     {
         case 1:     //Пункт меню 1
             for(short trigger = 1; trigger > 0;)
             {
                 system("clear");
                 printf("Выберите множество\n1.A\n2.B\n3.C\n4.D\n5.E\n0.Назад\n");
-                scanf("%d", &menu_sc1);
-                switch(menu_sc1)
+                scanf("%d", &menu_sc1);     //Выбор множества для ввода
+                switch(menu_sc1)    //Меню для выбора множества для ввода
                 {
                 case 1:
                     system("clear");
@@ -104,7 +108,7 @@ int main()
                 system("clear");
                 printf("Выберите множество\n1.A\n2.B\n3.C\n4.D\n5.E\n0.Назад\n");
                 scanf("%d", &menu_sc2);
-                switch(menu_sc2)   //Меню 2
+                switch(menu_sc2)
                 {
                     case 1:  //Пункт меню 2
                         system("clear");
@@ -296,6 +300,8 @@ int main()
             getchar(), getchar();
             break;
         case 8:
+            break;
+        case 9:
             break;
         case 0:
             printf("Выход\n");
