@@ -21,10 +21,13 @@ int main()
 
     int union_arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};      //Объединёный массив
 
-    char simms1;
-    char simms2;
-    int ms1[] = {0, 0, 0, 0, 0};
-    int ms2[] = {0, 0, 0, 0, 0};
+    char character_to_select_arr1;    //Символ для выбора массива 1
+    char character_to_select_arr2;    //Символ для выбора массива 2
+    int arr_to_combine1[] = {0, 0, 0, 0, 0};    //Промежутачный массив 1 для объединения
+    int arr_to_combine2[] = {0, 0, 0, 0, 0};    //Промежутачный массив 2 для объединения
+
+    int arr_to_intersect1[] = {0, 0, 0, 0, 0};    //Массив 1 для проверки пересечения множеств
+    int arr_to_intersect2[] = {0, 0, 0, 0, 0};    //Массив 2 для проверки пересечения множеств
 
     for(;;)
     {
@@ -305,87 +308,169 @@ int main()
             getchar(), getchar();
             break;
         case 8:
-            break;
-        case 9:
             system("clear");
             printf("Выберите множество 1\nA=a,A\nB=b,B\nC=c,C\nD=d,D\nE=e,E\n");
-            scanf("%s", &simms1);
-            if(simms1 == 'A' || simms1 == 'a')
+            scanf("%s", &character_to_select_arr1);
+            if(character_to_select_arr1 == 'A' || character_to_select_arr1 == 'a')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms1[i] = A[i];
+                    arr_to_intersect1[i] = A[i];
                 }
             }
-            if(simms1 == 'B' || simms1 == 'b')
+            if(character_to_select_arr1 == 'B' || character_to_select_arr1 == 'b')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms1[i] = B[i];
+                    arr_to_intersect1[i] = B[i];
                 }
             }
-            if(simms1 == 'C' || simms1 == 'c')
+            if(character_to_select_arr1 == 'C' || character_to_select_arr1 == 'c')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms1[i] = C[i];
+                    arr_to_intersect1[i] = C[i];
                 }
             }
-            if(simms1 == 'D' || simms1 == 'd')
+            if(character_to_select_arr1 == 'D' || character_to_select_arr1 == 'd')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms1[i] = D[i];
+                    arr_to_intersect1[i] = D[i];
                 }
             }
-            if(simms1 == 'E' || simms1 == 'e')
+            if(character_to_select_arr1 == 'E' || character_to_select_arr1 == 'e')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms1[i] = E[i];
+                    arr_to_intersect1[i] = E[i];
                 }
             }
             system("clear");
             printf("Выберите множество 2\nA=a,A\nB=b,B\nC=c,C\nD=d,D\nE=e,E\n");
-            scanf("%s", &simms2);
-            if(simms2 == 'A' || simms2 == 'a')
+            scanf("%s", &character_to_select_arr2);
+            if(character_to_select_arr2 == 'A' || character_to_select_arr2 == 'a')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms2[i] = A[i];
+                    arr_to_intersect2[i] = A[i];
                 }
             }
-            if(simms2 == 'B' || simms2 == 'b')
+            if(character_to_select_arr2 == 'B' || character_to_select_arr2 == 'b')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms2[i] = B[i];
+                    arr_to_intersect2[i] = B[i];
                 }
             }
-            if(simms2 == 'C' || simms2 == 'c')
+            if(character_to_select_arr2 == 'C' || character_to_select_arr2 == 'c')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms2[i] = C[i];
+                    arr_to_intersect2[i] = C[i];
                 }
             }
-            if(simms2 == 'D' || simms2 == 'd')
+            if(character_to_select_arr2 == 'D' || character_to_select_arr2 == 'd')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms2[i] = D[i];
+                    arr_to_intersect2[i] = D[i];
                 }
             }
-            if(simms2 == 'E' || simms2 == 'e')
+            if(character_to_select_arr2 == 'E' || character_to_select_arr2 == 'e')
             {
                 for(short i = 0; i < 5; i++)
                 {
-                    ms2[i] = E[i];
+                    arr_to_intersect2[i] = E[i];
                 }
             }
-            union_of_arr(ms1, ms2, union_arr);
+            for(int i = 0; i < 5; i++)
+            {
+                intersection_arr(character_to_select_arr1, character_to_select_arr2, arr_to_intersect1, arr_to_intersect2, &i);
+            }
+            printf("Нажмите Enter для продолжения...");
+            getchar(), getchar();
+            break;
+        case 9:
             system("clear");
-            printf("Объединение массивов %c и %c\n", simms1, simms2);
+            printf("Выберите множество 1\nA=a,A\nB=b,B\nC=c,C\nD=d,D\nE=e,E\n");
+            scanf("%s", &character_to_select_arr1);
+            if(character_to_select_arr1 == 'A' || character_to_select_arr1 == 'a')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine1[i] = A[i];
+                }
+            }
+            if(character_to_select_arr1 == 'B' || character_to_select_arr1 == 'b')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine1[i] = B[i];
+                }
+            }
+            if(character_to_select_arr1 == 'C' || character_to_select_arr1 == 'c')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine1[i] = C[i];
+                }
+            }
+            if(character_to_select_arr1 == 'D' || character_to_select_arr1 == 'd')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine1[i] = D[i];
+                }
+            }
+            if(character_to_select_arr1 == 'E' || character_to_select_arr1 == 'e')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine1[i] = E[i];
+                }
+            }
+            system("clear");
+            printf("Выберите множество 2\nA=a,A\nB=b,B\nC=c,C\nD=d,D\nE=e,E\n");
+            scanf("%s", &character_to_select_arr2);
+            if(character_to_select_arr2 == 'A' || character_to_select_arr2 == 'a')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine2[i] = A[i];
+                }
+            }
+            if(character_to_select_arr2 == 'B' || character_to_select_arr2 == 'b')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine2[i] = B[i];
+                }
+            }
+            if(character_to_select_arr2 == 'C' || character_to_select_arr2 == 'c')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine2[i] = C[i];
+                }
+            }
+            if(character_to_select_arr2 == 'D' || character_to_select_arr2 == 'd')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine2[i] = D[i];
+                }
+            }
+            if(character_to_select_arr2 == 'E' || character_to_select_arr2 == 'e')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    arr_to_combine2[i] = E[i];
+                }
+            }
+            union_of_arr(arr_to_combine1, arr_to_combine2, union_arr);
+            system("clear");
+            printf("Объединение массивов %c и %c\n", character_to_select_arr1, character_to_select_arr2);
             output_arr(union_arr, 9);
             getchar(), getchar();
             break;
