@@ -6,6 +6,7 @@ int main()
     int menu_sc1 = 0;   //Пременная для выбора пункта в case 1
     int menu_sc2 = 0;   //Пременная для выбора пункта в case 2
     int menu_sc3 = 0;   //Пременная для выбора пункта в case 3
+    int menu_sc4 = 0;   //Пременная для выбора пункта в case 9
 
     int A[] = {0, 0, 0, 0, 0};   //Множество A
     int B[] = {0, 0, 0, 0, 0};   //Множество B
@@ -19,6 +20,11 @@ int main()
     int universe_up = 100;
 
     int union_arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};      //Объединёный массив
+
+    char simms1;
+    char simms2;
+    int ms1[] = {0, 0, 0, 0, 0};
+    int ms2[] = {0, 0, 0, 0, 0};
 
     for(;;)
     {
@@ -91,7 +97,7 @@ int main()
                     break;
                 case 0:
                     system("clear");
-                    trigger = 0;
+                    trigger = 0;    //Триггер для выхода из меню
                     break;
                 default:
                     system("clear");
@@ -146,7 +152,7 @@ int main()
                         break;
                     case 0:
                         system("clear");
-                        trigger = 0;
+                        trigger = 0;    //Триггер для выхода из меню
                         break;
                     default:
                         system("clear");
@@ -206,7 +212,7 @@ int main()
                         break;
                     case 0:
                         system("clear");
-                        trigger = 0;
+                        trigger = 0;    //Триггер для выхода из меню
                         break;
                     default:
                         system("clear");
@@ -302,7 +308,84 @@ int main()
             break;
         case 9:
             system("clear");
-            union_of_arr(A, B, union_arr);
+            printf("Выберите множество 1\nA=a,A\nB=b,B\nC=c,C\nD=d,D\nE=e,E\n");
+            scanf("%s", &simms1);
+            if(simms1 == 'A' || simms1 == 'a')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms1[i] = A[i];
+                }
+            }
+            if(simms1 == 'B' || simms1 == 'b')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms1[i] = B[i];
+                }
+            }
+            if(simms1 == 'C' || simms1 == 'c')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms1[i] = C[i];
+                }
+            }
+            if(simms1 == 'D' || simms1 == 'd')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms1[i] = D[i];
+                }
+            }
+            if(simms1 == 'E' || simms1 == 'e')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms1[i] = E[i];
+                }
+            }
+            system("clear");
+            printf("Выберите множество 2\nA=a,A\nB=b,B\nC=c,C\nD=d,D\nE=e,E\n");
+            scanf("%s", &simms2);
+            if(simms2 == 'A' || simms2 == 'a')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms2[i] = A[i];
+                }
+            }
+            if(simms2 == 'B' || simms2 == 'b')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms2[i] = B[i];
+                }
+            }
+            if(simms2 == 'C' || simms2 == 'c')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms2[i] = C[i];
+                }
+            }
+            if(simms2 == 'D' || simms2 == 'd')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms2[i] = D[i];
+                }
+            }
+            if(simms2 == 'E' || simms2 == 'e')
+            {
+                for(short i = 0; i < 5; i++)
+                {
+                    ms2[i] = E[i];
+                }
+            }
+            union_of_arr(ms1, ms2, union_arr);
+            system("clear");
+            printf("Объединение массивов %c и %c\n", simms1, simms2);
             output_arr(union_arr, 9);
             getchar(), getchar();
             break;
