@@ -13,13 +13,13 @@ int main()
     int D[] = {0, 0, 0, 0, 0};   //Множество D
     int E[] = {0, 0, 0, 0, 0};    //Множество E
 
-    int chislo_dlya_proverki = 0;   //Число для проверки принадлежности множеству
+    int number_to_check = 0;   //Число для проверки принадлежности множеству
 
     int universe_low = 0;
     int universe_up = 100;
 
-    int mn_dlya_ob1 = 0;
-    int mn_dlya_ob2 = 0;
+    int union_arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};      //Объединёный массив
+    char test;
 
     for(;;)
     {
@@ -58,35 +58,35 @@ int main()
                 case 1:
                     system("clear");
                     printf("Введите множество A\n");
-                    input_mass(A);
+                    input_arr(A);
                     printf("Готово!\nНажмите Enter для продолжения...");
                     getchar(), getchar();
                     break;
                 case 2:
                     system("clear");
                     printf("Введите множество B\n");
-                    input_mass(B);
+                    input_arr(B);
                     printf("Готово!\nНажмите Enter для продолжения...");
                     getchar(), getchar();
                     break;
                 case 3:
                     system("clear");
                     printf("Введите множество C\n");
-                    input_mass(C);
+                    input_arr(C);
                     printf("Готово!\nНажмите Enter для продолжения...");
                     getchar(), getchar();
                     break;
                 case 4:
                     system("clear");
                     printf("Введите множество D\n");
-                    input_mass(D);
+                    input_arr(D);
                     printf("Готово!\nНажмите Enter для продолжения...");
                     getchar(), getchar();
                     break;
                 case 5:
                     system("clear");
                     printf("Введите множество E\n");
-                    input_mass(E);
+                    input_arr(E);
                     printf("Готово!\nНажмите Enter для продолжения...");
                     getchar(), getchar();
                     break;
@@ -113,35 +113,35 @@ int main()
                     case 1:  //Пункт меню 2
                         system("clear");
                         printf("Множество A=");
-                        output_mass(A);
+                        output_arr(A, 4);
                         printf("\n\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 2:
                         system("clear");
                         printf("Множество B=");
-                        output_mass(B);
+                        output_arr(B, 4);
                         printf("\n\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 3:
                         system("clear");
                         printf("Множество C=");
-                        output_mass(C);
+                        output_arr(C, 4);
                         printf("\n\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 4:
                         system("clear");
                         printf("Множество D=");
-                        output_mass(D);
+                        output_arr(D, 4);
                         printf("\n\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 5:
                         system("clear");
                         printf("Множество E=");
-                        output_mass(E);
+                        output_arr(E, 4);
                         printf("\n\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
@@ -168,40 +168,40 @@ int main()
                     case 1:
                         system("clear");
                         printf("Введите целое число:");
-                        scanf("%d", &chislo_dlya_proverki);
-                        proverka_mass(A, 'A', &chislo_dlya_proverki);
+                        scanf("%d", &number_to_check);
+                        check_arr(A, 'A', &number_to_check);
                         printf("\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 2:
                         system("clear");
                         printf("Введите целое число:");
-                        scanf("%d", &chislo_dlya_proverki);
-                        proverka_mass(B, 'B', &chislo_dlya_proverki);
+                        scanf("%d", &number_to_check);
+                        check_arr(B, 'B', &number_to_check);
                         printf("\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 3:
                         system("clear");
                         printf("Введите целое число:");
-                        scanf("%d", &chislo_dlya_proverki);
-                        proverka_mass(C, 'C', &chislo_dlya_proverki);
+                        scanf("%d", &number_to_check);
+                        check_arr(C, 'C', &number_to_check);
                         printf("\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 4:
                         system("clear");
                         printf("Введите целое число:");
-                        scanf("%d", &chislo_dlya_proverki);
-                        proverka_mass(D, 'D', &chislo_dlya_proverki);
+                        scanf("%d", &number_to_check);
+                        check_arr(D, 'D', &number_to_check);
                         printf("\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
                     case 5:
                         system("clear");
                         printf("Введите целое число:");
-                        scanf("%d", &chislo_dlya_proverki);
-                        proverka_mass(E, 'E', &chislo_dlya_proverki);
+                        scanf("%d", &number_to_check);
+                        check_arr(E, 'E', &number_to_check);
                         printf("\nНажмите Enter для продолжения...");
                         getchar(), getchar();
                         break;
@@ -220,27 +220,27 @@ int main()
         case 4:
             system("clear");
             printf("Множество A=");
-            output_mass(A);
+            output_arr(A, 4);
             printf("\nМножество B=");
-            output_mass(B);
+            output_arr(B, 4);
             printf("\nМножество C=");
-            output_mass(C);
+            output_arr(C, 4);
             printf("\nМножество D=");
-            output_mass(D);
+            output_arr(D, 4);
             printf("\nМножество E=");
-            output_mass(E);
+            output_arr(E, 4);
             printf("\n\nНажмите Enter для продолжения...");
             getchar(), getchar();
             break;
         case 5:
             system("clear");
             printf("Введите целое число:");
-            scanf("%d", &chislo_dlya_proverki);
-            proverka_mass(A, 'A', &chislo_dlya_proverki);
-            proverka_mass(B, 'B', &chislo_dlya_proverki);
-            proverka_mass(C, 'C', &chislo_dlya_proverki);
-            proverka_mass(D, 'D', &chislo_dlya_proverki);
-            proverka_mass(E, 'E', &chislo_dlya_proverki);
+            scanf("%d", &number_to_check);
+            check_arr(A, 'A', &number_to_check);
+            check_arr(B, 'B', &number_to_check);
+            check_arr(C, 'C', &number_to_check);
+            check_arr(D, 'D', &number_to_check);
+            check_arr(E, 'E', &number_to_check);
             printf("\nНажмите Enter для продолжения...");
             getchar(), getchar();
             break;
@@ -258,43 +258,43 @@ int main()
             printf("Найти пересечение всех множеств\n");
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('A', 'B', A, B, &i);
+                intersection_arr('A', 'B', A, B, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('A', 'C', A, C, &i);
+                intersection_arr('A', 'C', A, C, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('A', 'D', A, D, &i);
+                intersection_arr('A', 'D', A, D, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('A', 'E', A, E, &i);
+                intersection_arr('A', 'E', A, E, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('B', 'C', B, C, &i);
+                intersection_arr('B', 'C', B, C, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('B', 'D', B, D, &i);
+                intersection_arr('B', 'D', B, D, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('B', 'E', B, E, &i);
+                intersection_arr('B', 'E', B, E, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('C', 'D', C, D, &i);
+                intersection_arr('C', 'D', C, D, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('C', 'E', C, E, &i);
+                intersection_arr('C', 'E', C, E, &i);
             }
             for(int i = 0; i < 5; i++)
             {
-                crossing_mass('D', 'E', D, E, &i);
+                intersection_arr('D', 'E', D, E, &i);
             }
             printf("Нажмите Enter для продолжения...");
             getchar(), getchar();
@@ -302,6 +302,10 @@ int main()
         case 8:
             break;
         case 9:
+            system("clear");
+            union_of_arr(A, B, union_arr);
+            output_arr(union_arr, 9);
+            getchar(), getchar();
             break;
         case 0:
             printf("Выход\n");

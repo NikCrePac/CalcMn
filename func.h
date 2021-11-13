@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void input_mass(int * ms)
+void input_arr(int * ms)
 {
     for(short i = 0; i < 5; i++)
     {
@@ -10,17 +10,31 @@ void input_mass(int * ms)
     }
 }
 
-void output_mass(int * ms)
+void union_of_arr(int * ms1, int * ms2, int * union_arr)
+{
+    int t = 5;
+    for(short i = 0; i < 5; i++)
+    {
+        union_arr[i] = ms1[i];
+    }
+    for(short i = 0; i < 5; i++)
+    {
+        union_arr[t] = ms2[i];
+        t++;
+    }
+}
+
+void output_arr(int * ms, short a)
 {
     printf("[");
-    for(short i = 0; i < 4; i++)
+    for(short i = 0; i < a; i++)
     {
         printf("%d,", ms[i]);
     }
-    printf("%d]", ms[4]);
+    printf("%d]", ms[a]);
 }
 
-void proverka_mass(int * ms, char bukva, int * cdp)
+void check_arr(int * ms, char bukva, int * cdp)
 {
     for(short i = 0; i < 5; i++)
     {
@@ -35,7 +49,7 @@ void proverka_mass(int * ms, char bukva, int * cdp)
     }
 }
 
-void crossing_mass(char sim1, char sim2, int * ms1, int * ms2, int * b)
+void intersection_arr (char sim1, char sim2, int * ms1, int * ms2, int * b)
 {
     for(short a = 0; a < 5; a++)
     {
