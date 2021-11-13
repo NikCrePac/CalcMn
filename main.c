@@ -19,7 +19,6 @@ int main()
     int universe_up = 100;
 
     int union_arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};      //Объединёный массив
-    char test;
 
     for(;;)
     {
