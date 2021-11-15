@@ -18,7 +18,7 @@ int main()
     int universe_low = 0;
     int universe_up = 100;
 
-    int union_arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};      //Объединёный массив
+    int union_arr[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};      //Объединенный массив
 
     char character_to_select_arr1;               //Символ для выбора массива 1
     char character_to_select_arr2;               //Символ для выбора массива 2
@@ -255,7 +255,7 @@ int main()
             system("clear");
             printf("Задайте нижнюю границу универсума\n");
             scanf("%d", &universe_low);
-            printf("Задайте верхнию границу универсума\n");
+            printf("Задайте верхнею границу универсума\n");
             scanf("%d", &universe_up);
             printf("Задан универсум [%d ... %d]", universe_low, universe_up);
             printf("\n\nНажмите Enter для продолжения...");

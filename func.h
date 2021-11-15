@@ -40,11 +40,11 @@ void check_arr(int * ms, char bukva, int * cdp)
     {
         if(ms[i] == *cdp)
         {
-            printf("Число %d пренадлежит множеству %c[%d]\n", *cdp, bukva, ms[i]);
+            printf("Число %d принадлежит множеству %c[%d]\n", *cdp, bukva, ms[i]);
         }
         else
         {
-            printf("Число %d не пренадлежит множеству %c[%d]\n", *cdp, bukva, ms[i]);
+            printf("Число %d не принадлежит множеству %c[%d]\n", *cdp, bukva, ms[i]);
         }
     }
 }
