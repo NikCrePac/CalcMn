@@ -314,6 +314,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'A';
                     arr_to_intersect1[i] = A[i];
                 }
             }
@@ -321,6 +322,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'B';
                     arr_to_intersect1[i] = B[i];
                 }
             }
@@ -328,6 +330,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'C';
                     arr_to_intersect1[i] = C[i];
                 }
             }
@@ -335,6 +338,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'D';
                     arr_to_intersect1[i] = D[i];
                 }
             }
@@ -342,6 +346,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'E';
                     arr_to_intersect1[i] = E[i];
                 }
             }
@@ -352,6 +357,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'A';
                     arr_to_intersect2[i] = A[i];
                 }
             }
@@ -359,6 +365,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'B';
                     arr_to_intersect2[i] = B[i];
                 }
             }
@@ -366,6 +373,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'C';
                     arr_to_intersect2[i] = C[i];
                 }
             }
@@ -373,6 +381,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'D';
                     arr_to_intersect2[i] = D[i];
                 }
             }
@@ -380,6 +389,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'E';
                     arr_to_intersect2[i] = E[i];
                 }
             }
@@ -398,6 +408,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'A';
                     arr_to_combine1[i] = A[i];
                 }
             }
@@ -405,6 +416,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'B';
                     arr_to_combine1[i] = B[i];
                 }
             }
@@ -412,6 +424,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'C';
                     arr_to_combine1[i] = C[i];
                 }
             }
@@ -419,6 +432,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'D';
                     arr_to_combine1[i] = D[i];
                 }
             }
@@ -426,6 +440,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr1 = 'E';
                     arr_to_combine1[i] = E[i];
                 }
             }
@@ -436,6 +451,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'A';
                     arr_to_combine2[i] = A[i];
                 }
             }
@@ -443,6 +459,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'B';
                     arr_to_combine2[i] = B[i];
                 }
             }
@@ -450,6 +467,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'C';
                     arr_to_combine2[i] = C[i];
                 }
             }
@@ -457,6 +475,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'D';
                     arr_to_combine2[i] = D[i];
                 }
             }
@@ -464,6 +483,7 @@ int main()
             {
                 for(short i = 0; i < 5; i++)
                 {
+                    character_to_select_arr2 = 'E';
                     arr_to_combine2[i] = E[i];
                 }
             }
@@ -471,6 +491,7 @@ int main()
             system("clear");
             printf("Объединение массивов %c и %c\n", character_to_select_arr1, character_to_select_arr2);
             output_arr(union_arr, 9);
+            printf("\n\nНажмите Enter для продолжения...");
             getchar(), getchar();
             break;
         case 0:
