@@ -1,4 +1,5 @@
 #include "func.h"
+#include "time.h"
 
 int main()
 {
@@ -28,6 +29,16 @@ int main()
     int arr_to_intersect1[] = {0, 0, 0, 0, 0};    //Промежуточный массив 1 для проверки пересечения множеств
     int arr_to_intersect2[] = {0, 0, 0, 0, 0};    //Промежуточный массив 2 для проверки пересечения множеств
 
+    //Game
+    srand(time(NULL));  //Инициализация генератора произвольного отображения яблока
+    char key;   //Символ для управления собакой
+    char location[11][21];  //Локация
+    int i;
+    int x = 10, y = 5;
+    int ox, oy;
+    int ax = 5, ay = 3;
+    int counter = 0;    //Счёт очков
+
     for(;;)
     {
     system("clear");
@@ -48,6 +59,7 @@ int main()
     puts("7. Найти пересечение всех множеств");
     puts("8. Найти пересечение множеств");
     puts("9. Объединение множеств");
+    puts("10. Game");
     puts("0. Выход");
 
     scanf("%d", &menu);    //Ввод номера пункта меню
@@ -494,6 +506,55 @@ int main()
             printf("\n\nНажмите Enter для продолжения...");
             getchar(), getchar();
             break;
+            case 10:
+                do
+                {
+                    //Локация
+                    sprintf(location[0], "####################");
+                    for(i = 1; i < 9; i++)
+                    {
+                        sprintf(location[i], "#                  #");
+                    }
+                    sprintf(location[9], "####################");
+
+                    location[y][x] = '@';   //Координаты собаки
+                    location[ay][ax] = '*';    //Координаты яблока
+
+                    system("clear");
+                    printf("Счёт: %d\n", counter);
+                    for(i = 0; i < 10; i++)
+                    {
+                        printf("%s\n", location[i]);
+                    }
+                    puts("Для выхода нажмите e");
+
+                    key = mygetch();    //Принимает символ для управления собакой
+
+                    ox = x;
+                    oy = y;
+
+                    if(key == 'w') y--;
+                    if(key == 's') y++;
+                    if(key == 'a') x--;
+                    if(key == 'd') x++;
+
+                    //Ограничение передвижения собаки стенами #
+                    if(location[y][x] == '#')
+                    {
+                        x = ox;
+                        y = oy;
+                    }
+
+                    //Генерация местоположения яблока
+                    if((x == ax) && (y == ay))
+                    {
+                        ax = rand() * 1.0 / RAND_MAX * 18 + 1;
+                        ay = rand() * 1.0 / RAND_MAX * 8 + 1;
+                        counter++;
+                    }
+                }
+                while(key != 'e');  //Выход из игры
+                break;
         case 0:
             printf("Выход\n");
             return 0;

@@ -1,6 +1,9 @@
 #pragma once
 #include <stdio.h>
 #include <stdlib.h>
+#include <termios.h>
+#include <unistd.h>
+#include <stdbool.h>
 
 void input_arr(int * ms)
 {
@@ -36,16 +39,18 @@ void output_arr(int * ms, short a)
 
 void check_arr(int * ms, char bukva, int * cdp)
 {
+    bool x = false;
     for(short i = 0; i < 5; i++)
     {
         if(ms[i] == *cdp)
         {
-            printf("Число %d принадлежит множеству %c[%d]\n", *cdp, bukva, ms[i]);
+            x = true;
+            printf("Число %d принадлежит множеству %c[%d]\n", *cdp, bukva, i);
         }
-        else
-        {
-            printf("Число %d не принадлежит множеству %c[%d]\n", *cdp, bukva, ms[i]);
-        }
+    }
+    if(x == false)
+    {
+        printf("Число %d не принадлежит множеству %c\n", *cdp, bukva);
     }
 }
 
@@ -58,4 +63,17 @@ void intersection_arr (char sim1, char sim2, int * ms1, int * ms2, int * b)
             printf("Массивы пересекаются в %c[%d]=%d %c[%d]=%d\n", sim1, a, ms1[a], sim2, *b, ms2[*b]);
         }
     }
+}
+
+int mygetch(void)
+{
+    struct termios oldattr, newattr;
+    int ch;
+    tcgetattr( STDIN_FILENO, &oldattr );
+    newattr = oldattr;
+    newattr.c_lflag &= ~( ICANON | ECHO );
+    tcsetattr( STDIN_FILENO, TCSANOW, &newattr );
+    ch = getchar();
+    tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
+    return ch;
 }
