@@ -33,7 +33,7 @@ int main()
     srand(time(NULL));  //Инициализация генератора произвольного отображения яблока
     char key;   //Символ для управления собакой
     char location[11][21];  //Локация
-    int i;
+    int ih;
     int x = 10, y = 5;
     int ox, oy;
     int ax = 5, ay = 3;
@@ -511,9 +511,9 @@ int main()
                 {
                     //Локация
                     sprintf(location[0], "####################");
-                    for(i = 1; i < 9; i++)
+                    for(ih = 1; ih < 9; ih++)
                     {
-                        sprintf(location[i], "#                  #");
+                        sprintf(location[ih], "#                  #");
                     }
                     sprintf(location[9], "####################");
 
@@ -522,9 +522,9 @@ int main()
 
                     system("clear");
                     printf("Счёт: %d\n", counter);
-                    for(i = 0; i < 10; i++)
+                    for(ih = 0; ih < 10; ih++)
                     {
-                        printf("%s\n", location[i]);
+                        printf("%s\n", location[ih]);
                     }
                     puts("Для выхода нажмите e");
 
