@@ -41,31 +41,31 @@ int main()
 
     for(;;)
     {
-    system("clear");
-    puts("╔══╗╔══╗╔╗──╔══╗╔╗──╔╗╔╗─╔╗");
-    puts("║╔═╝║╔╗║║║──║╔═╝║║──║║║╚═╝║");
-    puts("║║──║╚╝║║║──║║──║╚╗╔╝║║╔╗─║");
-    puts("║║──║╔╗║║║──║║──║╔╗╔╗║║║╚╗║");
-    puts("║╚═╗║║║║║╚═╗║╚═╗║║╚╝║║║║─║║");
-    puts("╚══╝╚╝╚╝╚══╝╚══╝╚╝──╚╝╚╝─╚╝");
-    puts("--------------------------------------------------");
-    //Пункты меню
-    puts("1. Ввод множества");
-    puts("2. Вывод множества");
-    puts("3. Проверка принадлежности множеству");
-    puts("4. Вывод всех множеств");
-    puts("5. Проверка принадлежности всем множествам");
-    puts("6. Задать универсум");
-    puts("7. Найти пересечение всех множеств");
-    puts("8. Найти пересечение множеств");
-    puts("9. Объединение множеств");
-    puts("10. Game");
-    puts("0. Выход");
+        system("clear");
+        puts("╔══╗╔══╗╔╗──╔══╗╔╗──╔╗╔╗─╔╗");
+        puts("║╔═╝║╔╗║║║──║╔═╝║║──║║║╚═╝║");
+        puts("║║──║╚╝║║║──║║──║╚╗╔╝║║╔╗─║");
+        puts("║║──║╔╗║║║──║║──║╔╗╔╗║║║╚╗║");
+        puts("║╚═╗║║║║║╚═╗║╚═╗║║╚╝║║║║─║║");
+        puts("╚══╝╚╝╚╝╚══╝╚══╝╚╝──╚╝╚╝─╚╝");
+        puts("--------------------------------------------------");
+        //Пункты меню
+        puts("1. Ввод множества");
+        puts("2. Вывод множества");
+        puts("3. Проверка принадлежности множеству");
+        puts("4. Вывод всех множеств");
+        puts("5. Проверка принадлежности всем множествам");
+        puts("6. Задать универсум");
+        puts("7. Найти пересечение всех множеств");
+        puts("8. Найти пересечение множеств");
+        puts("9. Объединение множеств");
+        puts("10. Game");
+        puts("0. Выход");
 
-    scanf("%d", &menu);    //Ввод номера пункта меню
+        scanf("%d", &menu);    //Ввод номера пункта меню
 
-    switch(menu)    //Главное меню
-    {
+        switch(menu)    //Главное меню
+        {
         case 1:     //Пункт меню 1
             for(short trigger = 1; trigger > 0;)
             {
@@ -129,50 +129,50 @@ int main()
                 scanf("%d", &menu_sc2);
                 switch(menu_sc2)
                 {
-                    case 1:  //Пункт меню 2
-                        system("clear");
-                        printf("Множество A=");
-                        output_arr(A, 4);
-                        printf("\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 2:
-                        system("clear");
-                        printf("Множество B=");
-                        output_arr(B, 4);
-                        printf("\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 3:
-                        system("clear");
-                        printf("Множество C=");
-                        output_arr(C, 4);
-                        printf("\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 4:
-                        system("clear");
-                        printf("Множество D=");
-                        output_arr(D, 4);
-                        printf("\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 5:
-                        system("clear");
-                        printf("Множество E=");
-                        output_arr(E, 4);
-                        printf("\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 0:
-                        system("clear");
-                        trigger = 0;    //Триггер для выхода из меню
-                        break;
-                    default:
-                        system("clear");
-                        printf("Вы выбрали несуществующий пункт меню!\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
+                case 1:  //Пункт меню 2
+                    system("clear");
+                    printf("Множество A=");
+                    output_arr(A, 4);
+                    printf("\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 2:
+                    system("clear");
+                    printf("Множество B=");
+                    output_arr(B, 4);
+                    printf("\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 3:
+                    system("clear");
+                    printf("Множество C=");
+                    output_arr(C, 4);
+                    printf("\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 4:
+                    system("clear");
+                    printf("Множество D=");
+                    output_arr(D, 4);
+                    printf("\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 5:
+                    system("clear");
+                    printf("Множество E=");
+                    output_arr(E, 4);
+                    printf("\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 0:
+                    system("clear");
+                    trigger = 0;    //Триггер для выхода из меню
+                    break;
+                default:
+                    system("clear");
+                    printf("Вы выбрали несуществующий пункт меню!\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
                 }
             }
             break;
@@ -184,55 +184,55 @@ int main()
                 scanf("%d", &menu_sc3);
                 switch(menu_sc3)   //Меню 3
                 {
-                    case 1:
-                        system("clear");
-                        printf("Введите целое число:");
-                        scanf("%d", &number_to_check);
-                        check_arr(A, 'A', &number_to_check);
-                        printf("\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 2:
-                        system("clear");
-                        printf("Введите целое число:");
-                        scanf("%d", &number_to_check);
-                        check_arr(B, 'B', &number_to_check);
-                        printf("\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 3:
-                        system("clear");
-                        printf("Введите целое число:");
-                        scanf("%d", &number_to_check);
-                        check_arr(C, 'C', &number_to_check);
-                        printf("\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 4:
-                        system("clear");
-                        printf("Введите целое число:");
-                        scanf("%d", &number_to_check);
-                        check_arr(D, 'D', &number_to_check);
-                        printf("\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 5:
-                        system("clear");
-                        printf("Введите целое число:");
-                        scanf("%d", &number_to_check);
-                        check_arr(E, 'E', &number_to_check);
-                        printf("\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
-                    case 0:
-                        system("clear");
-                        trigger = 0;    //Триггер для выхода из меню
-                        break;
-                    default:
-                        system("clear");
-                        printf("Вы выбрали несуществующий пункт меню!\n\nНажмите Enter для продолжения...");
-                        getchar(), getchar();
-                        break;
+                case 1:
+                    system("clear");
+                    printf("Введите целое число:");
+                    scanf("%d", &number_to_check);
+                    check_arr(A, 'A', &number_to_check);
+                    printf("\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 2:
+                    system("clear");
+                    printf("Введите целое число:");
+                    scanf("%d", &number_to_check);
+                    check_arr(B, 'B', &number_to_check);
+                    printf("\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 3:
+                    system("clear");
+                    printf("Введите целое число:");
+                    scanf("%d", &number_to_check);
+                    check_arr(C, 'C', &number_to_check);
+                    printf("\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 4:
+                    system("clear");
+                    printf("Введите целое число:");
+                    scanf("%d", &number_to_check);
+                    check_arr(D, 'D', &number_to_check);
+                    printf("\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 5:
+                    system("clear");
+                    printf("Введите целое число:");
+                    scanf("%d", &number_to_check);
+                    check_arr(E, 'E', &number_to_check);
+                    printf("\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
+                case 0:
+                    system("clear");
+                    trigger = 0;    //Триггер для выхода из меню
+                    break;
+                default:
+                    system("clear");
+                    printf("Вы выбрали несуществующий пункт меню!\n\nНажмите Enter для продолжения...");
+                    getchar(), getchar();
+                    break;
                 }
             }
             break;
@@ -506,55 +506,55 @@ int main()
             printf("\n\nНажмите Enter для продолжения...");
             getchar(), getchar();
             break;
-            case 10:
-                do
+        case 10:
+            do
+            {
+                //Локация
+                sprintf(location[0], "####################");
+                for(ih = 1; ih < 9; ih++)
                 {
-                    //Локация
-                    sprintf(location[0], "####################");
-                    for(ih = 1; ih < 9; ih++)
-                    {
-                        sprintf(location[ih], "#                  #");
-                    }
-                    sprintf(location[9], "####################");
-
-                    location[y][x] = '@';   //Координаты собаки
-                    location[ay][ax] = '*';    //Координаты яблока
-
-                    system("clear");
-                    printf("Счёт: %d\n", counter);
-                    for(ih = 0; ih < 10; ih++)
-                    {
-                        printf("%s\n", location[ih]);
-                    }
-                    puts("Для выхода нажмите e");
-
-                    key = mygetch();    //Принимает символ для управления собакой
-
-                    ox = x;
-                    oy = y;
-
-                    if(key == 'w') y--;
-                    if(key == 's') y++;
-                    if(key == 'a') x--;
-                    if(key == 'd') x++;
-
-                    //Ограничение передвижения собаки стенами #
-                    if(location[y][x] == '#')
-                    {
-                        x = ox;
-                        y = oy;
-                    }
-
-                    //Генерация местоположения яблока
-                    if((x == ax) && (y == ay))
-                    {
-                        ax = rand() * 1.0 / RAND_MAX * 18 + 1;
-                        ay = rand() * 1.0 / RAND_MAX * 8 + 1;
-                        counter++;
-                    }
+                    sprintf(location[ih], "#                  #");
                 }
-                while(key != 'e');  //Выход из игры
-                break;
+                sprintf(location[9], "####################");
+
+                location[y][x] = '@';   //Координаты собаки
+                location[ay][ax] = '*';    //Координаты яблока
+
+                system("clear");
+                printf("Счёт: %d\n", counter);
+                for(ih = 0; ih < 10; ih++)
+                {
+                    printf("%s\n", location[ih]);
+                }
+                puts("Для выхода нажмите e");
+
+                key = mygetch();    //Принимает символ для управления собакой
+
+                ox = x;
+                oy = y;
+
+                if(key == 'w') y--;
+                if(key == 's') y++;
+                if(key == 'a') x--;
+                if(key == 'd') x++;
+
+                //Ограничение передвижения собаки стенами #
+                if(location[y][x] == '#')
+                {
+                    x = ox;
+                    y = oy;
+                }
+
+                //Генерация местоположения яблока
+                if((x == ax) && (y == ay))
+                {
+                    ax = rand() * 1.0 / RAND_MAX * 18 + 1;
+                    ay = rand() * 1.0 / RAND_MAX * 8 + 1;
+                    counter++;
+                }
+            }
+            while(key != 'e');  //Выход из игры
+            break;
         case 0:
             printf("Выход\n");
             return 0;
@@ -566,5 +566,5 @@ int main()
             getchar(), getchar();
         }
     }
-return 0 ;
+    return 0 ;
 }
